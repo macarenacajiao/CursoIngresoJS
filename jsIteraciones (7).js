@@ -3,22 +3,25 @@ function mostrar()
 
 	var contador=0;
 	var acumulador=0;
-	var respuesta='si';
+	var respuesta="si";
 	var numero;
 
-		while (respuesta=="si")
-	{
-		numero=prompt ("Ingrese un número.");
-		numero=parseInt (numero);
-		contador= contador +1;
-		acumulador= acumulador+numero;
 
-		respuesta=prompt ("¿Quiere continuar?");
-	
+
+	while(respuesta == "si"){
+		contador++;
+		numero = prompt("Ingrese un numero.");
+		numero = parseInt(numero);
+		acumulador = acumulador + numero;
+		respuesta = prompt("Desea continuar? si/no")
 	}
+
+	var promedio = acumulador / contador;
+	promedio = parseInt(promedio);
+
 
 
 document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
+document.getElementById('promedio').value=promedio;
 
 }//FIN DE LA FUNCIÓN
