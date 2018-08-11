@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>
+	Ejemplo if
+</h1>
+
+<script type="text/javascript">
+	var num1;
+	var num2;
+	var num3;
+	var maximo;
+	var minimo;
+
+
+	num1=prompt('Ingresar numero 1.');
+	num2=prompt('Ingresar numero 2.');
+	num3=prompt('Ingresar numero 3.');
+
+	num1=parseInt (num1);
+	num2=parseInt (num2);
+	num3=parseInt (num3);
+	
+	//si numero uno es mayor que numero 2, 
+
+	if (num1>num2)
+	{
+		if (num1>num3)
+		{
+			maximo=num1;
+			if (num3>num2)
+			{
+				minimo=num2;
+			}
+			else
+			{
+				minimo=num3;
+			}
+		}
+		else 
+		{
+			maximo=num3;
+		}
+	} //numero 2 es mayor que numero 1.
+		else 
+		{
+			if (num2>num3) 
+			{
+				maximo=num2;
+				if (num3>num1)
+				{
+					minimo=num1;
+				}
+				else
+				{
+					minimo=num3;
+				}
+			}
+			else 
+			{
+				maximo=num3;
+				minimo=num1;
+			}
+		}
+
+
+	alert ('El numero maximo es '+maximo+' y el numero minimo es '+minimo+'.');
+
+
+</script>
+
+</body>
+</html>
